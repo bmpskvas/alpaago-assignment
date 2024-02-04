@@ -25,7 +25,7 @@ function App() {
   };
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
-  const [uid, setUid] = useState("");
+  const [uid, setUid] = useState(localStorage.getItem('username') ?? "");
   return (
     <MyContext.Provider value={{ uid, setUid }}>
     <>
