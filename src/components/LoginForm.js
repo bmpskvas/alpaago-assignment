@@ -25,7 +25,7 @@ function LoginForm() {
         }
         return false;
     }
-   
+    
     function login() {
         const db = getDatabase();
 
@@ -40,7 +40,7 @@ function LoginForm() {
                     const id=form.username;
                     localStorage.setItem('username',form.username);
                     setUid(id);
-                  
+                
                     window.location.href = '/home';
                 } else {
                     alert('Wrong password');

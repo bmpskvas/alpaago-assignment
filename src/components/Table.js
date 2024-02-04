@@ -11,7 +11,8 @@ import { MyContext } from './Mycontext';
 function Table() {
     const { uid, setUid } = useContext(MyContext);
     console.log(uid);
-    if(!uid) window.location.href="/";
+    // if(!uid) window.location.href="/";
+    if(!localStorage.getItem('username'))window.location.href="/";
     const [userdetails, setUserDetails] = useState([]);
     const [agdata, setAgData] = useState([]);
 
@@ -64,7 +65,7 @@ function Table() {
             </div>
 
             <div className="html-table-container">
-                <table className="custom-table"> {/* Add a custom class to the table */}
+                <table className="custom-table" > {/* Add a custom class to the table */}
                     <thead>
                         <tr>
                             <th>Availability</th>
